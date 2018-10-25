@@ -21,14 +21,15 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    age: state.age
+    age: state.age,
+    state: state.history
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAgeUp: () => dispatch({ type: "AGE_UP" }),
-    onAgeDown: () => dispatch({ type: "AGE_DOWN" })
+    onAgeUp: () => dispatch({ type: "AGE_UP", value: 1 }),
+    onAgeDown: () => dispatch({ type: "AGE_DOWN", value: 1 })
   };
 };
 
